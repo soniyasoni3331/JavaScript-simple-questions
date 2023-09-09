@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            text-align: center;
+
+        }
+        .form label, input{
+
+            margin: 5px;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Sign Up Form</h1>
+    <form class="form">
+        <label for="">Name:</label>
+        <input class="name" type="text" placeholder="(Minimum 3 characters)">
+        <br>
+        <label for="">Email:</label>
+        <input class="email" type="email" placeholder="(Enter Your Email)">
+        <br>
+        <label for="">Password:</label>
+        <input class="password" type="password" placeholder="(Minimum 8 characters)">
+        <br>
+        <button>Submit</button>
+    </form>
+    <script>
+        const name=document.querySelector(".name");
+        const password=document.querySelector(".password");
+        const submit=document.querySelector("button");
+
+        submit.addEventListener("click",()=>{
+            if(name.value.length<3 || password.value.length<8){
+                alert("Form validation failed");
+            }else{
+                alert("Form validation successful");
+            }
+        })
+    </script>
+</body>
+</html>

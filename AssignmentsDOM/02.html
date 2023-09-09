@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark-theme{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">This is Light Mode</h1>
+    <button class="btn">Toggle Theme</button>
+
+    <!-- script starts here -->
+    <script>
+        const body=document.body;
+        const heading=document.querySelector(".heading");
+        const button=document.querySelector(".btn");
+        button.addEventListener("click",()=>{
+            body.classList.toggle("dark-theme");
+        });
+    </script>
+</body>
+</html>

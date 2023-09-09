@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="login">Login</button>
+    <button id="logout">Logout</button>
+    <h1 class="isLoggedIn"></h1>
+    
+    <script>
+        const loginbtn=document.querySelector("#login");
+        const logOutbtn=document.querySelector("#logout");
+        const heading=document.querySelector(".isLoggedIn");
+        
+        loginbtn.addEventListener("click",()=>{
+            localStorage.setItem("auth",true);
+            window.location.reload();
+        });
+
+        logOutbtn.addEventListener("click",()=>{
+            localStorage.removeItem("auth",false);
+            window.location.reload();
+        });
+        const storage=localStorage.getItem("auth");
+        if(storage =="true"){
+            heading.textContent="User is Logged In."
+        }else{
+            heading.textContent="User has not Logged In."
+        };
+        
+    </script>
+</body>
+</html>

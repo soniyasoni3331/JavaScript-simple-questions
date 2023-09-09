@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+</head>
+<body>
+    <h1>Update Profile Picture</h1>
+    <input type="file" name="" id="">
+    <h2>Your Profile Picture</h2>
+    <img src="" alt="No Profile Picture">
+    
+   <script>
+    const input=document.querySelector("input");
+    const image=document.querySelector("img");
+    
+    input.addEventListener("change",()=>{
+        const selectedImage=input.files[0];
+        const reader= new FileReader();
+        reader.onload=function(e){
+            image.src=e.target.result;
+        }
+        reader.readAsDataURL(selectedImage);
+    });
+
+   </script> 
+</body>
+</html>

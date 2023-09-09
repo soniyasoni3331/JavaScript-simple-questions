@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Which is your favourite programming language.</h3>
+    <select class="dropdown"></select>
+
+    <script>
+        const optionList=["Java","C++","JavaScript","Python"];
+        const dropdown=document.querySelector(".dropdown");
+        for(let options of optionList){
+            const option=document.createElement("option");
+            option.textContent=options;
+            dropdown.appendChild(option);
+        }
+        
+    </script>
+</body>
+</html>

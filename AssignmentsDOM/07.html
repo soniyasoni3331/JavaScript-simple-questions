@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Search for items">
+    <h2>Results:</h2>
+    <ul class="itemsList">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">Tailwind CSS</li>
+        <li class="item">Git Hub</li>
+        <li class="item">JavaScript</li>
+    </ul>
+    <script>
+        const input=document.querySelector("input");
+        const listItem=document.querySelectorAll(".item");
+        console.log(listItem);
+        input.addEventListener("input",()=>{
+            const lowercaseInput=input.value.toLowerCase();
+            for(let item of listItem){
+                const lowercasevalues=item.textContent.toLowerCase();
+                if(lowercasevalues.includes(lowercaseInput)){
+                    item.style.display="block";
+                }else{
+                    item.style.display="none";
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
