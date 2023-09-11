@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter you text here">
+    <button class="reverseBtn">Click to reverse the strig</button>
+    <h4>Reversed string: <span class="reversedString"></span></h4>
+    <script>
+        const input=document.querySelector("input");
+        const reverseBtn=document.querySelector(".reverseBtn");
+        const rerversedText=document.querySelector(".reversedString");
+
+        function reverseFunc(){
+            return input.textContent.split("").reverse().join("");
+        }
+        console.log(reverseFunc());
+
+        // reverseBtn.addEventListener("click",function(){
+        //     setTimeout(function(){
+        //         rerversedText.innerHTML=reverseFunc();
+
+        //     } ,2000);
+        //     // console.log(rerversedText);
+        // })
+        
+
+    </script>
+</body>
+</html>
